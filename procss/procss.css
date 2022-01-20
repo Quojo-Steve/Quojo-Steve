@@ -1,0 +1,138 @@
+.table-1{
+    background-color: blue;
+    color: beige;
+    
+}
+.table-1 img{
+height: 40px;
+width: 40px;
+}
+.con{
+    width: 100%;
+    padding: 10px;
+    align-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.my-form label{
+    display:block ;
+    margin-top: 2em;
+    padding: 10px;
+    width: 55%;
+}
+.my-form input[type="text"]{
+    width: 100%;
+    margin-top: 2em;
+    height: fit-content;
+}
+.my-form input[type="password"]{
+    width: 100%;
+    margin-top: 1.6em;
+    
+}
+body{
+    background-image: url(./21.jpg);
+    font-family: fantasy;
+line-height: 1.6em;
+position: fixed;
+}
+.my-form{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.my-form input[type="submit"]{
+    color: whitesmoke;
+    margin-top: 1.6em;
+    background-color: blue;
+    border: none;
+}
+
+
+button{
+    color: #fbfcfb;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.my-form button[type="submit"]:hover{
+    color:blue ;
+}
+.icons img{
+    width: 30px;
+    animation: icon 7s linear infinite;
+}
+input{
+    outline: none;
+    background: transparent;
+    border: #fbfcfb 2px solid;
+}
+.icons{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+.my-form .form-group{
+    width: 55%;
+    align-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+@keyframes icon {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+        
+    }
+    25%{
+        
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-88vh);
+        opacity: 0;
+    }
+}
+.icons img:nth-child(1){
+   animation-delay: 2s; 
+   width: 20px;
+}
+.icons img:nth-child(2){
+    animation-delay: 1s;
+    width: 25px; 
+ }
+ .icons img:nth-child(3){
+    animation-delay: 4.5s; 
+    width: 13px;
+ }
+ .icons img:nth-child(4){
+    animation-delay: 6s; 
+ }
+ .icons img:nth-child(5){
+    animation-delay: 2.5s; 
+    width: 20px;
+ }
+ .icons img:nth-child(6){
+    animation-delay: 7s; 
+ }
+ .icons img:nth-child(7){
+    animation-delay: 9s; 
+ }
+ .icons img:nth-child(8){
+    animation-delay: 4s; 
+    width: 19px;
+ }
+ .table-2{
+     height: fit-content;
+ }
