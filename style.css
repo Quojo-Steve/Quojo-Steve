@@ -1,0 +1,831 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*     Nav Styling    */
+.navbar{
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar .menu li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color  0.3s ease;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Satisfy;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar.sticky .logo a span{
+    color: white;
+}
+.navbar.sticky .menu li a:hover{
+    color: white;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+/* home section */
+.home{
+    display: flex;
+    background: url(./pexels-sebastiaan-stam-1097456.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    position: relative;
+    z-index: -1;
+}
+.home::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    z-index: 1;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 99999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+/*  Hamburger Menu  */
+.circle{
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: all 0.25s;
+    margin-right: 30px;
+    display: none;
+    border: 2px solid white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 15px;
+}
+.top{
+    top: 0;
+    left: 0;
+    background: none;
+    height: 20px;
+    width: 27px;
+    transform: rotate(0);
+    z-index: 99;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 2px;
+    transition: all 0.3s ease;
+    transform: translateY(-2px)
+}
+.middle{
+    top: 0;
+    left: 0;
+    background: white;
+    height: 4px;
+    width: 24px;
+    transform: rotate(0);
+    z-index: 99;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 2px;
+    transition: all 0.3s ease;
+}
+.middle{
+    transform: translateY(7px);
+}
+.middle:hover{
+    background: red;
+}
+.span{
+   
+}
+ /*about section styling*/
+section{
+    padding: 100px 0;
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .title{
+    font-family: satisfy;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.about .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about .title::after   {
+    content: "who I am";
+    position: absolute;
+    background: white;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a,
+.skills .skills-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+.about .about-content .right a:active{
+    transform: scale(0.8);
+}
+/*Services Section*/
+.services .title{
+    font-family: satisfy;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.services .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: white;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services .title::after   {
+    content: "what I offer";
+    position: absolute;
+    background: black;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.services{
+    color: white;
+    background: black;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.services .serv-content .card:hover img{
+    transform: scale(1.05);
+}
+.services .serv-content .card img{
+    height: 30px;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/* Skills Section  */
+.skills .title{
+    font-family: satisfy;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.skills .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills .title::after   {
+    content: "what I know";
+    position: absolute;
+    background: white;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    background: lightgray;
+    width: 100%;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 80%;
+}
+.skills-content .right .js::before{
+    width: 30%;
+}
+.skills-content .right .php::before{
+    width: 50%;
+}
+.skills-content .right .mysql::before{
+    width: 40%;
+}
+
+/* teams section*/
+.teams{
+    background: black;
+    color: white;
+}
+.teams .title{
+    font-family: satisfy;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.teams .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: white;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.teams .title::after   {
+    content: "who's with me";
+    position: absolute;
+    background: black;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.teams .carousel img{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: white;
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px; 
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 450px;
+}
+.teams .carousel .card:hover{
+    background: crimson;
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot.hover{
+    background: crimson;
+}
+/*contact section syling*/
+.contact .title{
+    font-family: satisfy;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.contact .title::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contact .title::after   {
+    content: "get in touch";
+    position: absolute;
+    background: white;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left p span{
+    color: crimson;
+    cursor: pointer;
+}
+.contact .contact .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row img{
+    height: 25px;
+    width: 25px;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+/*footer section*/
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: white;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+footer .links a img{
+    width: 25px;
+    height: 25px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .span{
+        display: block;
+        z-index: 999;
+    }
+    .open .top{
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+    .open .middle{
+        display: none;
+    }
+    .open .last{
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+    font-size: 23px;
+    padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .column{
+        width: 10 0%;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+
+}
+@media (max-width: 690px){
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+    width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
+.hidden{
+    transform: translateX(100%);
+}
+.no-scroll{
+    overflow: hidden;
+}
+.mobilemenu a{
+    text-decoration: none;
+    color: black;
+    font-size: 2.5rem;
+    line-height: 5rem;
+}
+.mobilemenu a:hover{
+    color: crimson;
+}
+
+.button-hidden{
+    width: 100%;
+    background: crimson;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin-top: 90px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.6);
+    outline: none;
+    border: none;
+
+}
+.button-hidden:hover{
+    color: black;
+}
+.button-hidden:active{
+    transform: scale(0.9);
+}
+.mobilemenu{
+    position: fixed;
+    background-color: white;
+    top: 70px;
+    right: 0;
+    width: 90%;
+    height: 70%;
+    z-index: 30;
+    padding: 30px 90px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
