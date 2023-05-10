@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on a hotel management system<br>I use Django for my backend<br>I use React, Html & Css & Js for frontend
+I'm currently working on bettering my C#<br>I use Django for my backend<br>I use React, Html & Css & Js for frontend
 
 
 ## 🌐 Socials:
