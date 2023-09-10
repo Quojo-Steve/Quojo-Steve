@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on bettering my C#<br>I use Django for my backend<br>I use React, Html & Css & Js for frontend
+I'm currently working on bettering my C#<br>I use Django for my backend<br>I use React, Html & Css & Js for frontend<br>I've recently learned to use Internet of Things
 
 
 ## 🌐 Socials:
