@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on bettering my C#<br>I use Django for my backend<br>I use React, Html & Css & Js for frontend<br>I've recently learned to use Internet of Things
+I am a recent graduate from Ho Technical University <br> I am a javascript and python developer <br> I use react native and flutter for mobile apps and react js and Django or Flask for web
 
 
 ## 🌐 Socials:
